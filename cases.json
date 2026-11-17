@@ -1,0 +1,14 @@
+{
+  "gates": {"max_uncited_claims": 0, "max_invalid_citations": 0},
+  "rules": {
+    "PTO-001": "Employees accrue 1.5 PTO days per month, usable after 90 days.",
+    "PTO-002": "PTO above 5 consecutive days needs manager approval.",
+    "EXP-101": "Meal expenses are reimbursed up to Rs 500 per day with receipts.",
+    "SEC-201": "Customer data exports require security team sign-off."
+  },
+  "cases": [
+    {"id": "pto-accrual", "question": "How much PTO do I earn each month and when can I use it?", "retrieved": ["PTO-001"], "claims_expect": 2},
+    {"id": "long-leave", "question": "I want 10 days off next month. What do I need?", "retrieved": ["PTO-001", "PTO-002"], "claims_expect": 2},
+    {"id": "meal-limit", "question": "What is the meal reimbursement limit?", "retrieved": ["EXP-101"], "claims_expect": 1}
+  ]
+}
